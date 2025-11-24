@@ -5,6 +5,17 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/UE_Project/P4_LQTT/LQTL/Content/GeneralCombat/L_Master.umap",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/GeneralCombat/Data/Input/Gameplay/IA_DragonForm.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/Characters/BP_PawnInGameMenu.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/GeneralCombat/Data/Input/Gameplay/IMC_CombatDefault.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/GeneralCombat/Blueprints/Pawns/BP_DefaultCombatCharacter.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/GeneralCombat/Data/Input/Gameplay/IA_LightAttack.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/_Member/Hiep/DragonFormTest/DragonForm_Level.umap",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/GeneralCombat/Blueprints/Components/BPC_EquipmentHandler.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/Characters/Main/Maze/BP_DefaultCombatCharacter_Child.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/_Member/Hiep/_Fx_Scene/Seq/Seq_HeavyShark_Atk.uasset",
+				"D:/UE_Project/Lqtl_Test_DragonForm/LQTL/Content/_Member/Hiep/_Fx_Scene/Seq/Seq_Illu_Atk.uasset",
 				"D:/UE_Project/Lqtl_Test_DragonForm/Content/Characters/Enemies/Tiger/TigerEnemy_BP.uasset",
 				"D:/UE_Project/Lqtl_Test_DragonForm/Content/GeneralCombat/Data/Structs/GeneralCombat/S_AttackComboData.uasset",
 				"D:/UE_Project/Lqtl_Test_DragonForm/Content/GeneralCombat/Data/Structs/GeneralCombat/S_MotionWarpData.uasset",
@@ -3305,8 +3316,7 @@
 				"D:/UE_Project/Lqtl_Test_DragonForm/Content/GeneralCombat/Animation/Montages/General/AM_HolsterWeapon.uasset",
 				"D:/UE_Project/Lqtl_Test_DragonForm/Content/Common/FX_Sources/SourcePackage/_Animation/Spear/Animation/Sequence/01_Idle/02_Idle_Combat/AS_Idle_Combat_to_Idle_Seq.uasset",
 				"D:/UE_Project/Lqtl_Test_DragonForm/Content/GeneralCombat/Animation/Montages/General/AM_EquipWeapon.uasset",
-				"D:/UE_Project/Lqtl_Test_DragonForm/Content/Common/FX_Sources/SourcePackage/_Animation/Spear/Animation/Sequence/01_Idle/01_Idle/AS_Idle_to_Idle_Combat_Seq.uasset",
-				"D:/UE_Project/P4_LQTT/LQTL/Content/GeneralCombat/L_Master.umap"
+				"D:/UE_Project/Lqtl_Test_DragonForm/Content/Common/FX_Sources/SourcePackage/_Animation/Spear/Animation/Sequence/01_Idle/01_Idle/AS_Idle_to_Idle_Combat_Seq.uasset"
 			]
 		}
 	]
