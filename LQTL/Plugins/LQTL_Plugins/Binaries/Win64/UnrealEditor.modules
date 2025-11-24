@@ -1,0 +1,9 @@
+{
+	"BuildId": "c41bb67f-fa0d-4c26-98cc-aad3a88ec549",
+	"Modules": 
+	{
+		"LQTL_Plugins": "UnrealEditor-LQTL_Plugins.dll",
+		"LQTL_Plugins_Runtime": "UnrealEditor-LQTL_Plugins_Runtime.dll",
+		"TWQuestEditor": "UnrealEditor-TWQuestEditor.dll"
+	}
+}

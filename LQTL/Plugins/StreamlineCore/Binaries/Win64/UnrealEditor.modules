@@ -1,0 +1,12 @@
+{
+	"BuildId": "c41bb67f-fa0d-4c26-98cc-aad3a88ec549",
+	"Modules": 
+	{
+		"StreamlineBlueprint": "UnrealEditor-StreamlineBlueprint.dll",
+		"StreamlineCore": "UnrealEditor-StreamlineCore.dll",
+		"StreamlineD3D11RHI": "UnrealEditor-StreamlineD3D11RHI.dll",
+		"StreamlineD3D12RHI": "UnrealEditor-StreamlineD3D12RHI.dll",
+		"StreamlineRHI": "UnrealEditor-StreamlineRHI.dll",
+		"StreamlineShaders": "UnrealEditor-StreamlineShaders.dll"
+	}
+}

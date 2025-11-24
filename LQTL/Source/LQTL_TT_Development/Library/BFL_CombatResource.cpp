@@ -1,0 +1,1 @@
+#include "BFL_CombatResource.h"
