@@ -22,12 +22,12 @@
 		},
 		{
 			"Name": "LQTL_Plugins",
-			"Type": "Editor",
+			"Type": "UncookedOnly",
 			"LoadingPhase": "PreDefault"
 		},
 		{
 			"Name": "TWQuestEditor",
-			"Type": "Editor",
+			"Type": "UncookedOnly",
 			"LoadingPhase": "PreDefault"
 		}
 	]

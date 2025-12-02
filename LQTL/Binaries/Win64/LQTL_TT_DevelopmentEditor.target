@@ -14,11 +14,11 @@
 		"MinorVersion": 6,
 		"PatchVersion": 1,
 		"Changelist": 0,
-		"CompatibleChangelist": 43139311,
-		"IsLicenseeVersion": 0,
-		"IsPromotedBuild": 0,
-		"BranchName": "UE5",
-		"BuildId": "c41bb67f-fa0d-4c26-98cc-aad3a88ec549"
+		"CompatibleChangelist": 0,
+		"IsLicenseeVersion": 1,
+		"IsPromotedBuild": 1,
+		"BranchName": "++lqtl+main",
+		"BuildId": "c6e471ac-53ca-406c-b45d-2408501cc352"
 	},
 	"BuildProducts": [
 		{
@@ -2575,6 +2575,14 @@
 		},
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/UnrealEditor-PlacementMode.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealEditor-PluginWarden.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealEditor-PluginWarden.pdb",
 			"Type": "SymbolFile"
 		},
 		{
@@ -8767,6 +8775,82 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/ProjectCleaner/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMAssetTools.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMAssetTools.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMContentEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMContentEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMExtendedEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMExtendedEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMExtendedRuntime.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMExtendedRuntime.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMPreviewEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMPreviewEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMSearch.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMSearch.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMSystem.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMSystem.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMSystemEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMSystemEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMUtilityLauncher.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor-SMUtilityLauncher.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -33948,6 +34032,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/SMSystem/SMSystem.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/StreamlineCore/Binaries/ThirdParty/Win64/Development/nvngx_deepdvc.dll",
 			"Type": "NonUFS"
 		},
@@ -34248,6 +34336,7 @@
 		"RigLogic",
 		"RigVM",
 		"RuntimeTelemetry",
+		"SMSystem",
 		"SQLiteCore",
 		"SequenceNavigator",
 		"SequencerAnimTools",

@@ -18,7 +18,7 @@ UTWDialogueEditorSettings::UTWDialogueEditorSettings()
     DefaultDialogueClass = UDialogue::StaticClass();
 
     auto DialogueNodeUserWidgetFinder = ConstructorHelpers::FClassFinder<UTWDialogueNodeUserWidget>(TEXT("WidgetBlueprint'/LQTL_Plugins/Widgets/Editor/WBP_DefaultDialogueNode.WBP_DefaultDialogueNode_C'"));
-    //check(DialogueNodeUserWidgetFinder.Succeeded())
+    check(DialogueNodeUserWidgetFinder.Succeeded())
     if (DialogueNodeUserWidgetFinder.Succeeded())
     {
         DefaultDialogueWidgetClass = DialogueNodeUserWidgetFinder.Class;

@@ -86,7 +86,7 @@ TArray<class UDialogueNode_Player*> UTWDialogueNode::GetPlayerReplies(class USoc
 	TArray<class UDialogueNode_Player*> ValidReplies;
 
 	//If any players in the party can select a reply, everyone can select it
-	// if (NarrativeComponent->IsSharedComponent())
+	// if (SocialComponent->IsSharedComponent())
 	// {
 	// 	for (auto& GroupMemberComp : NarrativeComponent->GroupMembers)
 	// 	{

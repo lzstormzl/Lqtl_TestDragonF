@@ -12,7 +12,7 @@ struct FSpeakerInfo
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditDefaultsOnly, Category = "Speakers")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Speakers")
 	FName SpeakerID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Speakers")

@@ -79,15 +79,15 @@ void FLQTL_PluginsModule::ShutdownModule()
 		FEdGraphUtilities::UnregisterVisualNodeFactory(GraphPanelNodeFactory_DialogueGraph);
 	}
 
-	// if (FModuleManager::Get().IsModuleLoaded("AssetTools"))
-	// {
-	// 	IAssetTools& AssetToolsModule = FModuleManager::GetModuleChecked<FAssetToolsModule>("AssetTools").Get();
-	// 	//Hủy đăng ký Dialogue Asset Type Action
-	// 	if (_dialogueAssetTypeActions.IsValid())
-	// 	{
-	// 		AssetToolsModule.UnregisterAssetTypeActions(_dialogueAssetTypeActions.ToSharedRef());
-	// 	}
-	// }
+	if (FModuleManager::Get().IsModuleLoaded("AssetTools"))
+	{
+		IAssetTools& AssetToolsModule = FModuleManager::GetModuleChecked<FAssetToolsModule>("AssetTools").Get();
+		//Hủy đăng ký Dialogue Asset Type Action
+		if (_dialogueAssetTypeActions.IsValid())
+		{
+			AssetToolsModule.UnregisterAssetTypeActions(_dialogueAssetTypeActions.ToSharedRef());
+		}
+	}
 }
 
 void FLQTL_PluginsModule::RegisterSettings()

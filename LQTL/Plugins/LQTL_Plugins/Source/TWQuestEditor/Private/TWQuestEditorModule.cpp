@@ -106,18 +106,18 @@ void FTWQuestEditorModule::ShutdownModule()
 		GraphPanelNodeFactory_QuestGraph.Reset();
 	}
 
-	// if (FModuleManager::Get().IsModuleLoaded("AssetTools"))
-	// {
-	// 	IAssetTools& AssetToolsModule = FModuleManager::GetModuleChecked<FAssetToolsModule>("AssetTools").Get();
-	// 	if (QuestAssetTypeActions.IsValid())
-	// 	{
-	// 		AssetToolsModule.UnregisterAssetTypeActions(QuestAssetTypeActions.ToSharedRef());
-	// 		//AssetToolsModule.UnregisterAssetTypeActions(QuestActionTypeActions.ToSharedRef());			
-	// 		AssetToolsModule.UnregisterAssetTypeActions(QuestTaskTypeActions.ToSharedRef());
-	// 		AssetToolsModule.UnregisterAssetTypeActions(SocialConditionTypeActions.ToSharedRef());
-	// 		AssetToolsModule.UnregisterAssetTypeActions(NarrativeEventTypeActions.ToSharedRef());
-	// 	}
-	// }
+	if (FModuleManager::Get().IsModuleLoaded("AssetTools"))
+	{
+		IAssetTools& AssetToolsModule = FModuleManager::GetModuleChecked<FAssetToolsModule>("AssetTools").Get();
+		if (QuestAssetTypeActions.IsValid())
+		{
+			AssetToolsModule.UnregisterAssetTypeActions(QuestAssetTypeActions.ToSharedRef());
+			//AssetToolsModule.UnregisterAssetTypeActions(QuestActionTypeActions.ToSharedRef());			
+			AssetToolsModule.UnregisterAssetTypeActions(QuestTaskTypeActions.ToSharedRef());
+			AssetToolsModule.UnregisterAssetTypeActions(SocialConditionTypeActions.ToSharedRef());
+			AssetToolsModule.UnregisterAssetTypeActions(NarrativeEventTypeActions.ToSharedRef());
+		}
+	}
 
 
 	FQuestEditorStyle::Shutdown();
