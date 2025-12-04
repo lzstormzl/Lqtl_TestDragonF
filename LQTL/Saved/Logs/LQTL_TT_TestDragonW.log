@@ -3197,3 +3197,13 @@ FBlueprintCompilationManagerImpl::FlushCompilationQueueImpl() []
 [2025.12.04-06.34.32:487][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
 [2025.12.04-06.34.33:091][  0]LogSlate: Took 0.019097 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
 [2025.12.04-06.34.33:136][  0]LogSlate: Took 0.020987 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2025.12.04-06.34.33:241][  0]LogSlate: Took 0.014609 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2025.12.04-06.34.34:662][  0]LogStall: Startup...
+[2025.12.04-06.34.34:720][  0]LogStall: Startup complete.
+[2025.12.04-06.34.34:926][  0]LogLoad: (Engine Initialization) Total time: 182.99 seconds
+[2025.12.04-06.34.37:196][  0]LogContentStreaming: Texture pool size now 400 MB
+[2025.12.04-06.34.37:197][  0]LogCsvProfiler: Display: Metadata set : streamingpoolsizemb="400"
+[2025.12.04-06.34.37:685][  0]LogAutomationController: Ignoring very large delta of 17223937.61 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2025.12.04-06.34.37:699][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.12.04-06.34.37:800][  0]LogPython: Display: Running start-up script E:/LQTT/Engine/Engine/Plugins/MovieScene/MovieRenderPipeline/Content/Python/init_unreal.py... started...
+[2025.12.04-06.34.38:288][  0]LogPython: Display: Running start-up script E:/LQTT/Engine/Engine/Plugins/MovieScene/MovieRenderPipeline/Content/Python/init_unreal.py... took 488.179 ms
