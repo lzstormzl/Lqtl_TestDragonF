@@ -3264,3 +3264,43 @@ FPackageName: Skipped package /Game/GeneralSocial/2_GameSystems/2_QuestSystem/Qu
 [2025.12.04-06.34.46:005][  2]LogExit: Transaction tracking system shut down
 [2025.12.04-06.34.48:664][  2]LogExit: Object subsystem successfully closed.
 [2025.12.04-06.34.48:832][  2]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.12.04-06.34.49:621][  2]LogStreamline: FStreamlineCoreModule::ShutdownModule Enter
+[2025.12.04-06.34.49:622][  2]LogStreamline: UnregisterStreamlineReflexHooks Enter
+[2025.12.04-06.34.49:622][  2]LogStreamline: UnregisterStreamlineReflexHooks Leave
+[2025.12.04-06.34.49:622][  2]LogStreamline: FStreamlineCoreModule::ShutdownModule Leave
+[2025.12.04-06.34.49:622][  2]LogNIS: FNISCoreModule::ShutdownModule Enter
+[2025.12.04-06.34.49:622][  2]LogNIS: FNISCoreModule::ShutdownModule Leave
+[2025.12.04-06.34.49:622][  2]LogDLSSEditor: FDLSSEditorModule::ShutdownModule Enter
+[2025.12.04-06.34.49:622][  2]LogDLSSEditor: FDLSSEditorModule::ShutdownModule Leave
+[2025.12.04-06.34.49:623][  2]LogDLSS: FDLSSModule::ShutdownModule Enter
+[2025.12.04-06.34.49:623][  2]LogDLSS: FDLSSModule::ShutdownModule Leave
+[2025.12.04-06.34.49:624][  2]LogDLSSNGXD3D12RHI: FNGXD3D12RHI::~FNGXD3D12RHI Enter
+[2025.12.04-06.34.49:624][  2]LogDLSSNGXD3D12RHI: FNGXD3D12RHI::~FNGXD3D12RHI Leave
+[2025.12.04-06.34.49:624][  2]LogDLSSNGXRHI: NGXRHI::~NGXRHI Enter
+[2025.12.04-06.34.49:624][  2]LogDLSSNGXRHI: NGXRHI::~NGXRHI Leave
+[2025.12.04-06.34.49:624][  2]LogDLSSNGXRHI: FNGXRHIModule::ShutdownModule Enter
+[2025.12.04-06.34.49:624][  2]LogDLSSNGXRHI: FNGXRHIModule::ShutdownModule Leave
+[2025.12.04-06.34.50:428][  2]LogMemoryProfiler: Shutdown
+[2025.12.04-06.34.50:431][  2]LogNetworkingProfiler: Shutdown
+[2025.12.04-06.34.50:431][  2]LoadingProfiler: Shutdown
+[2025.12.04-06.34.50:432][  2]LogTimingProfiler: Shutdown
+[2025.12.04-06.34.50:444][  2]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDGenericDebugDrawExtension] ...
+[2025.12.04-06.34.50:444][  2]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDAccelerationStructuresExtension] ...
+[2025.12.04-06.34.50:661][  2]LogFileManager: Warning: DeleteFile was unable to delete 'E:/LQTLtest/Lqtl_TestDragonF/LQTL/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini', retrying in .5s...
+[2025.12.04-06.34.51:163][  2]LogFileManager: Warning: DeleteFile recovered during retry!
+[2025.12.04-06.34.52:020][  2]LogStreamlineRHI: FStreamlineRHIModule::ShutdownModule Enter
+[2025.12.04-06.34.52:020][  2]LogStreamlineD3D12RHI: FStreamlineD3D12RHI::~FStreamlineD3D12RHI Enter
+[2025.12.04-06.34.52:020][  2]LogStreamlineD3D12RHI: FStreamlineD3D12RHI::~FStreamlineD3D12RHI Leave
+[2025.12.04-06.34.52:020][  2]LogStreamlineRHI: FStreamlineRHI::~FStreamlineRHI Enter
+[2025.12.04-06.34.52:021][  2]LogStreamlineRHI: FStreamlineRHI::~FStreamlineRHI Leave
+[2025.12.04-06.34.52:021][  2]LogStreamlineRHI: FStreamlineRHIModule::ShutdownModule Leave
+[2025.12.04-06.34.52:021][  2]LogStreamlineD3D12RHI: FStreamlineD3D12RHIModule::ShutdownModule Enter
+[2025.12.04-06.34.52:021][  2]LogStreamlineD3D12RHI: FStreamlineD3D12RHIModule::ShutdownModule Leave
+[2025.12.04-06.34.52:092][  2]LogChaosDD: Chaos Debug Draw Shutdown
+[2025.12.04-06.34.52:097][  2]LogDLSSNGXVulkanRHIPreInit: FNGXVulkanRHIPreInitModule::ShutdownModule Enter
+[2025.12.04-06.34.52:097][  2]LogDLSSNGXVulkanRHIPreInit: FNGXVulkanRHIPreInitModule::ShutdownModule Leave
+[2025.12.04-06.34.52:123][  2]LogNFORDenoise: NFORDenoise function shutting down
+[2025.12.04-06.34.52:143][  2]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2025.12.04-06.34.52:144][  2]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B90D6D422-4385-AD38-B2D9-368F01D92B73%7D&AppID=UEEditor.UnrealEngine.Release&AppVersion=5.6.1-0%2B%2B%2Blqtl%2Bmain&UserID=bd25624744ed0325aefdfe9eb9aa72f8%7C73f9240bf71d4fd3b871c21f01c49100%7C672d8c1f-00b0-4c64-8056-bbd93a97384f&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2025.12.04-06.34.52:196][  2]LogEOSSDK: LogEOS: SDK Config Platform Update Request Successful, Time: 89.146576
+[2025.12.04-06.34.52:246][  2]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 99.593597
