@@ -74,3 +74,4 @@ LQTL/Plugins/**/Intermediate/*
 # Cache files for the editor to use
 LQTL/DerivedDataCache/*
 LQTL/LQTL_TT_TestDragonW.uproject
+LQTL/Saved/Logs/LQTL_TT_TestDragonW.log
