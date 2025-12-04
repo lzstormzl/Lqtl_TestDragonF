@@ -3207,3 +3207,53 @@ FBlueprintCompilationManagerImpl::FlushCompilationQueueImpl() []
 [2025.12.04-06.34.37:699][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
 [2025.12.04-06.34.37:800][  0]LogPython: Display: Running start-up script E:/LQTT/Engine/Engine/Plugins/MovieScene/MovieRenderPipeline/Content/Python/init_unreal.py... started...
 [2025.12.04-06.34.38:288][  0]LogPython: Display: Running start-up script E:/LQTT/Engine/Engine/Plugins/MovieScene/MovieRenderPipeline/Content/Python/init_unreal.py... took 488.179 ms
+[2025.12.04-06.34.38:532][  0]LogPython: Display: Running start-up script E:/LQTT/Engine/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2025.12.04-06.34.38:929][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+
+[2025.12.04-06.34.38:938][  0]LogPython: Display: Running start-up script E:/LQTT/Engine/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 406.639 ms (total: 894.818 ms)
+[2025.12.04-06.34.38:973][  0]LoadErrors: Warning: While trying to load package /Game/GeneralSocial/1_Social/ThuyTinh_Social_Controller, a dependent package /Game/GeneralSocial/2_GameSystems/2_QuestSystem/QuestLists/BP_Quest_Base was not available. Additional explanatory information follows:
+FPackageName: Skipped package /Game/GeneralSocial/2_GameSystems/2_QuestSystem/QuestLists/BP_Quest_Base has a valid, mounted, mount point but does not exist either on disk or in iostore. The uncooked file would be expected on disk at 'E:/LQTLtest/Lqtl_TestDragonF/LQTL/Content/GeneralSocial/2_GameSystems/2_QuestSystem/QuestLists/BP_Quest_Base'. Perhaps it has been deleted or was not synced?
+
+[2025.12.04-06.34.38:997][  0]Cmd: CLOSE_SLATE_MAINFRAME
+[2025.12.04-06.34.39:255][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.79ms
+[2025.12.04-06.34.39:562][  0]LogStall: Shutdown...
+[2025.12.04-06.34.39:563][  0]LogStall: Shutdown complete.
+[2025.12.04-06.34.39:814][  0]LogSlate: Window 'LQTL_TT_TestDragonW - Unreal Editor' being destroyed
+[2025.12.04-06.34.40:253][  1]LogFileCache: Retrieving MD5 hashes for directory 'E:/LQTLtest/Lqtl_TestDragonF/LQTL/Content/' took 4.44s
+[2025.12.04-06.34.40:362][  1]LogAssetRegistry: AssetRegistryGather time 1.6294s: AssetDataDiscovery 0.6552s, AssetDataGather 0.3938s, StoreResults 0.5804s. Wall time 119.8280s.
+	NumCachedDirectories 0. NumUncachedDirectories 4807. NumCachedFiles 28641. NumUncachedFiles 1.
+	BackgroundTickInterruptions 15.
+[2025.12.04-06.34.40:607][  1]LogPlacementMode: Display: The Asset Registry is done with its initial scan, the list of placeable classes has been updated.
+[2025.12.04-06.34.40:887][  1]LogStreaming: Display: FlushAsyncLoading(357): 1 QueuedPackages, 0 AsyncPackages
+[2025.12.04-06.34.40:967][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000000 seconds (updated 0 objects)
+[2025.12.04-06.34.40:987][  1]LogSourceControl: Uncontrolled asset discovery started...
+[2025.12.04-06.34.41:205][  1]LogSourceControl: Uncontrolled asset discovery finished in 0.218042 seconds (Found 0 uncontrolled assets)
+[2025.12.04-06.34.41:730][  1]LogAutomationController: Ignoring very large delta of 4.04 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2025.12.04-06.34.41:876][  1]Cmd: QUIT_EDITOR
+[2025.12.04-06.34.41:876][  1]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.12.04-06.34.41:920][  2]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.12.04-06.34.41:943][  2]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.12.04-06.34.41:943][  2]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.12.04-06.34.41:964][  2]LogWorld: UWorld::CleanupWorld for DragonForm_Level, bSessionEnded=true, bCleanupResources=true
+[2025.12.04-06.34.41:976][  2]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.12.04-06.34.42:125][  2]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.12.04-06.34.42:125][  2]LogTedsSettings: UTedsSettingsEditorSubsystem::Deinitialize
+[2025.12.04-06.34.42:154][  2]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.12.04-06.34.42:191][  2]LogRuntimeTelemetry: Recording EnginePreExit events
+[2025.12.04-06.34.42:192][  2]LogHttp: Warning: 	Sleeping 0.500s to wait for 1 outstanding Http Requests.
+[2025.12.04-06.34.42:692][  2]LogHttp: Warning: 	Sleeping 0.500s to wait for 1 outstanding Http Requests.
+[2025.12.04-06.34.43:195][  2]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.12.04-06.34.43:217][  2]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={90D6D422-4385-AD38-B2D9-368F01D92B73}
+[2025.12.04-06.34.43:221][  2]LogAnalytics: Display: [UEEditor.UnrealEngine.Release] AnalyticsET::EndSession
+[2025.12.04-06.34.43:248][  2]LogGameFeatures: Shutting down game features subsystem
+[2025.12.04-06.34.43:255][  2]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.12.04-06.34.43:255][  2]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.12.04-06.34.43:256][  2]LogAudio: Display: Audio Device unregistered from world 'DragonForm_Level'.
+[2025.12.04-06.34.43:258][  2]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.12.04-06.34.43:272][  2]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=4
+[2025.12.04-06.34.43:286][  2]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=2
+[2025.12.04-06.34.43:318][  2]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.12.04-06.34.43:318][  2]LogAudio: Display: Audio Device Manager Shutdown
+[2025.12.04-06.34.43:330][  2]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.12.04-06.34.43:331][  2]LogExit: Preparing to exit.
+[2025.12.04-06.34.43:526][  2]LogUObjectHash: Compacting FUObjectHashTables data took   1.78ms
