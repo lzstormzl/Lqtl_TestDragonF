@@ -3161,3 +3161,5 @@ FBlueprintCompilationManagerImpl::FlushCompilationQueueImpl() []
 [2025.12.04-06.34.24:734][  0]Cmd: MAP CHECKDEP NOCLEARLOG
 [2025.12.04-06.34.24:741][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 3.892ms to complete.
 [2025.12.04-06.34.25:424][  0]LogUnrealEdMisc: Total Editor Startup Time, took 173.493
+[2025.12.04-06.34.25:588][  0]LogWindowsTextInputMethodSystem: Activated input method: English (United States) - (Keyboard).
+[2025.12.04-06.34.26:155][  0]LogDerivedDataCache: ../../../Engine/DerivedDataCache: Maintenance finished in +00:00:00.026 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
