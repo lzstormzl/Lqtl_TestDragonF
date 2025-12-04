@@ -1,0 +1,15 @@
+{
+	"BuildId": "c6e471ac-53ca-406c-b45d-2408501cc352",
+	"Modules": 
+	{
+		"SMAssetTools": "UnrealEditor-SMAssetTools.dll",
+		"SMContentEditor": "UnrealEditor-SMContentEditor.dll",
+		"SMExtendedEditor": "UnrealEditor-SMExtendedEditor.dll",
+		"SMExtendedRuntime": "UnrealEditor-SMExtendedRuntime.dll",
+		"SMPreviewEditor": "UnrealEditor-SMPreviewEditor.dll",
+		"SMSearch": "UnrealEditor-SMSearch.dll",
+		"SMSystem": "UnrealEditor-SMSystem.dll",
+		"SMSystemEditor": "UnrealEditor-SMSystemEditor.dll",
+		"SMUtilityLauncher": "UnrealEditor-SMUtilityLauncher.dll"
+	}
+}
