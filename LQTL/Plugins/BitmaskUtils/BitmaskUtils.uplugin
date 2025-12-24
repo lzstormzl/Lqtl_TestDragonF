@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Bitmask Utility Nodes",
+  "Description": "A set of Blueprint nodes for working with bitmask enums.",
+  "Category": "Blueprint",
+  "Modules": [
+    {
+      "Name": "BitmaskUtils",
+      "Type": "Editor",
+      "LoadingPhase": "Default"
+    }
+  ]
+}
