@@ -15,64 +15,68 @@ class LQ_GAMEPLAYABILITIESSYSTEM_API ULQCharacterAttributeSet : public UAttribut
 {
 	GENERATED_BODY()
 
+public:
+	// Attribute accessors (public for damage calculation and external access)
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, WalkSpeed);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, SprintSpeed);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, TurnSpeed);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, MaxHP);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, CurrentHP);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, MaxShield);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, Defense);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, AttackPower);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, SpiritAttackPower);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, StaggerResistance);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, CritRate);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, CritDamage);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, StatusResistance);
+	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, DamageMultiplier);
+
 protected:
 	virtual void InitFromMetaDataTable(const UDataTable* DataTable) override;
-	
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, WalkSpeed);
+	virtual bool PreGameplayEffectExecute(struct FGameplayEffectModCallbackData& Data) override;
+	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
+
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData WalkSpeed;
 
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, SprintSpeed);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData SprintSpeed;
 
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, TurnSpeed);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData TurnSpeed;
 
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, MaxHP);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData MaxHP;
 
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, CurrentHP);
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes", meta=(HideInDetailsView))
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData CurrentHP;
 
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, MaxShield);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData MaxShield;
 
-	// Defense
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, Defense);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData Defense;
 
-	// Attack Power
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, AttackPower);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData AttackPower;
 
-	// Spirit Attack Power
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, SpiritAttackPower);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData SpiritAttackPower;
 
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, StaggerResistance);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData StaggerResistance;
 
-	// Crit Rate
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, CritRate);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData CritRate;
 
-	// Crit Damage
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, CritDamage);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData CritDamage;
 
-	// Status Resistance
-	ATTRIBUTE_ACCESSORS_BASIC(ULQCharacterAttributeSet, StatusResistance);
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData StatusResistance;
+
+	// Damage Multiplier (additive: 0 = no change, 0.2 = +20% damage)
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
+	FGameplayAttributeData DamageMultiplier;
 };

@@ -6,6 +6,7 @@
 #include "LQHitboxManager.h"
 #include "LQHitboxTypes.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
+#include "LQAbilitySystemTypes.h"
 #include "StructUtils/InstancedStruct.h"
 #include "LQHitboxAnimNotifyState.generated.h"
 
@@ -28,10 +29,14 @@ protected:
 
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;
+	virtual FString GetNotifyName_Implementation() const override;
 #endif
 
 	UPROPERTY(EditAnywhere, meta=(ExcludeBaseStruct))
 	TInstancedStruct<FHitboxShapeBase> HitboxShape;
+
+	UPROPERTY(EditAnywhere)
+	TInstancedStruct<FHitboxAttackData> AttackData;
 
 private:
 	UPROPERTY()

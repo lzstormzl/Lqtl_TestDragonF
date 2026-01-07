@@ -6,6 +6,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "LQHitboxSettings.generated.h"
 
+class UGameplayEffect;
 /**
  * 
  */
@@ -14,6 +15,8 @@ class LQHITBOXSYSTEM_API ULQHitboxSettings : public UDeveloperSettings
 {
 	GENERATED_BODY()
 
+public:
 	UPROPERTY(EditAnywhere, Config)
 	TEnumAsByte<ETraceTypeQuery> DefaultTraceChannel = ETraceTypeQuery::TraceTypeQuery1;
+
 };

@@ -8,6 +8,12 @@ AActor* UUGC_IFocusTargetMethod::GetTargetLocation_Implementation(AActor* InOwne
 	return nullptr;
 }
 
+AActor* UUGC_IFocusTargetMethod::GetTargetLocationWithSettings_Implementation(class AActor* InOwner, const FUGCCameraFocusSettings& FocusSettings, FVector OwnerLocation,
+	FVector ViewPointLocation, FRotator ViewPointRotation, FVector& OutTargetLocation)
+{
+	return nullptr;
+}
+
 UWorld* UUGC_IFocusTargetMethod::GetWorld() const
 {
 	if (GWorld && GWorld->IsGameWorld() && GWorld->HasBegunPlay())

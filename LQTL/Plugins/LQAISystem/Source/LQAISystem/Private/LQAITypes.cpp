@@ -7,7 +7,7 @@ DEFINE_LOG_CATEGORY(LogAI);
 
 static bool bDebugLQAI = false;
 static FAutoConsoleVariableRef CVarDebugLQAI(
-	TEXT("LQ.IA.EnableDebug"),
+	TEXT("LQAI.ShowDebug"),
 	bDebugLQAI,
 	TEXT("Enable LQ AI debug.\nFalse = Off, True = On"),
 	ECVF_Cheat

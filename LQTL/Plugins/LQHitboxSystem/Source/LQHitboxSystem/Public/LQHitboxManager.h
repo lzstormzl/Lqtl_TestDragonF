@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayAbilitySpecHandle.h"
 #include "LQHitboxTypes.h"
 #include "Components/ActorComponent.h"
 #include "LQHitboxManager.generated.h"
@@ -22,7 +23,16 @@ public:
 
 protected:
 	static inline FHitboxDebugSettings DebugSetting = FHitboxDebugSettings();
+
 	virtual void BeginPlay() override;
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	void ReceiveHitboxNotify(const FHitResult& HitResult);
+	void ReceiveHitboxNotify(const FGameplayAbilitySpecHandle& AbilitySpecHandle, const FHitResult& HitResult, TConstStructView<struct FHitboxAttackData> HitboxAttackData);
+
+#if WITH_EDITOR
+	UFUNCTION()
+	TArray<FName> GetCollisionProfiles();
+#endif
+
+	UPROPERTY(EditDefaultsOnly, meta=(GetOptions="GetCollisionProfiles"))
+	TMap<FName, TSubclassOf<class UOnHitBehaviorBase>> OnHitBehaviorByObjectType;
 };

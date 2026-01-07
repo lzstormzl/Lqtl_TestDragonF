@@ -3,6 +3,10 @@
 
 #include "LQHitboxManager.h"
 
+#include "LQHitboxAnimNotifyState.h"
+#include "OnHitBehaviorBase.h"
+#include "StructUtils/StructView.h"
+
 bool bShowDebug = false;
 FAutoConsoleCommandWithWorldAndArgs LQShowHitboxDebugCommand(TEXT("LQ.Debug.ShowHitbox"),TEXT("Show hitbox debug info"),
                                                              FConsoleCommandWithWorldAndArgsDelegate::CreateLambda([](const TArray<FString>& Args, UWorld* World)
@@ -57,7 +61,41 @@ void ULQHitboxManager::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	// ...
 }
 
-void ULQHitboxManager::ReceiveHitboxNotify(const FHitResult& HitResult)
+void ULQHitboxManager::ReceiveHitboxNotify(const FGameplayAbilitySpecHandle& AbilitySpecHandle, const FHitResult& HitResult, TConstStructView<FHitboxAttackData> HitboxAttackData)
 {
 	UE_LOGFMT(LogLQHitboxSystem, Log, "Hitbox hit actor: {0}, component: {1}", UKismetSystemLibrary::GetDisplayName(HitResult.GetActor()), GetNameSafe(HitResult.GetComponent()));
+
+	if (!HitboxAttackData.IsValid())
+		HitboxAttackData = TConstStructView<FHitboxAttackData>(FHitboxAttackData());
+	if (HitResult.GetComponent())
+	{
+		auto FoundBehavior = OnHitBehaviorByObjectType.Find(HitResult.GetComponent()->GetCollisionProfileName());
+		if (FoundBehavior && FoundBehavior->Get())
+		{
+			auto Behavior = NewObject<UOnHitBehaviorBase>(this, &(*FoundBehavior->Get()), TEXT("OnHitBehavior"), RF_Transient);
+			if (Behavior)
+			{
+				Behavior->ExecuteOnHit(GetOwner(), AbilitySpecHandle, HitResult, TInstancedStruct<FHitboxAttackData>(HitboxAttackData));
+			}
+		}
+	}
 }
+
+#if WITH_EDITOR
+TArray<FName> ULQHitboxManager::GetCollisionProfiles()
+{
+	TArray<TSharedPtr<FName>> SharedNames;
+	UCollisionProfile::GetProfileNames(SharedNames);
+
+	TArray<FName> Names;
+	Names.Reserve(SharedNames.Num());
+	for (const TSharedPtr<FName>& SharedName : SharedNames)
+	{
+		if (const FName* Name = SharedName.Get())
+		{
+			Names.Add(*Name);
+		}
+	}
+	return Names;
+}
+#endif

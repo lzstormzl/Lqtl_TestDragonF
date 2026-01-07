@@ -18,6 +18,11 @@
 			"Name": "LQ_GameplayAbilitiesSystem",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "LQ_GameplayAbilitiesSystemEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
 		}
 	]
 }

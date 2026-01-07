@@ -7,6 +7,7 @@
 #include "LQAIFunctionLibrary.generated.h"
 
 class ULQAIStateTreeComponent;
+class UBlackboardComponent;
 
 UCLASS()
 class LQAISYSTEM_API ULQAIFunctionLibrary : public UBlueprintFunctionLibrary
@@ -25,4 +26,18 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "LQ AI", meta = (Categories = "LQ.AI.Goal"))
 	static bool AddAIGoalForActor(AActor* Actor, FGameplayTag GoalTag);
+
+	// Actor should be either of type ACharacter or AAIController
+	UFUNCTION(BlueprintPure, Category = "LQ AI")
+	static UBlackboardComponent* GetBlackboardComponentFromActor(AActor* Actor);
+
+	UFUNCTION(BlueprintPure, Category = "LQ AI")
+	static AActor* GetAICurrentTargetFromActor(AActor* Actor);
+
+	/**
+	 * Checks if LQ AI debug visualization is enabled
+	 * @return	true if debug is enabled, false otherwise
+	 */
+	UFUNCTION(BlueprintPure, Category = "LQ AI")
+	static bool IsDebugEnabled();
 };

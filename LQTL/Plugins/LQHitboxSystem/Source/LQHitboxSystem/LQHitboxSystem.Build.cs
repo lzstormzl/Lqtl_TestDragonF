@@ -27,7 +27,7 @@ public class LQHitboxSystem : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core", "DeveloperSettings", "Engine"
+				"Core", "DeveloperSettings", "Engine", "GameplayAbilities", "LQ_GameplayAbilitiesSystem", "LQTeam"
 				// ... add other public dependencies that you statically link with here ...
 			}
 		);

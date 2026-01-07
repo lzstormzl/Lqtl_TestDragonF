@@ -3,8 +3,11 @@
 
 #include "LQAnimationDrivenGameplayAbility.h"
 
+#include "LQAbilitySystemComponent.h"
+#include "LQAbilitySystemInterface.h"
 #include "Abilities/Tasks/AbilityTask_PlayMontageAndWait.h"
 #include "Engine/AssetManager.h"
+#include "StructUtils/StructView.h"
 
 ULQAnimationDrivenGameplayAbility::ULQAnimationDrivenGameplayAbility()
 {
@@ -51,6 +54,10 @@ void ULQAnimationDrivenGameplayAbility::ActivateAbility(const FGameplayAbilitySp
 
 	if (DrivenMontage && AvatarSkel && bAutoPlayMontageOnActivation)
 	{
+		if (auto ASC = Cast<ULQAbilitySystemComponent>(GetAbilitySystemComponentFromActorInfo()))
+		{
+			ASC->AddMontageToAbilitySpecHandle(Handle, TObjectKey<UAnimMontage>(DrivenMontage));
+		}
 		UAbilityTask_PlayMontageAndWait* PlayMontageAndWait = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(this, NAME_None, DrivenMontage);
 		PlayMontageAndWait->OnCompleted.AddUniqueDynamic(this, &ULQAnimationDrivenGameplayAbility::OnMontageCompleted);
 		PlayMontageAndWait->OnBlendOut.AddUniqueDynamic(this, &ULQAnimationDrivenGameplayAbility::OnMontageBlendOut);
@@ -58,6 +65,15 @@ void ULQAnimationDrivenGameplayAbility::ActivateAbility(const FGameplayAbilitySp
 		PlayMontageAndWait->OnCancelled.AddUniqueDynamic(this, &ULQAnimationDrivenGameplayAbility::OnMontageCancelled);
 		PlayMontageAndWait->ReadyForActivation();
 	}
+}
+
+void ULQAnimationDrivenGameplayAbility::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
+{
+	if (auto ASC = Cast<ULQAbilitySystemComponent>(GetAbilitySystemComponentFromActorInfo()))
+	{
+		ASC->RemoveMontageToAbilitySpecHandle(Handle);
+	}
+	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
 }
 
 void ULQAnimationDrivenGameplayAbility::OnMontageAssetLoaded()

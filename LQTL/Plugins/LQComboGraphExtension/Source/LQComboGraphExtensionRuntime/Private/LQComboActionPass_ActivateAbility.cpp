@@ -6,6 +6,7 @@
 #include "AbilitySystemGlobals.h"
 #include "LQAbilitySystemComponent.h"
 #include "LQAbilitySystemLibrary.h"
+#include "LQGameplayAbilitiesSettings.h"
 #include "LQGameplayAbility.h"
 #include "ComboManager/ComboManagerComponent.h"
 #include "GraphInstance/ComboGraphInstance.h"
@@ -38,3 +39,31 @@ FString ULQComboActionPass_ActivateAbility::GetPassInformation_Implementation() 
 {
 	return FString::Format(TEXT("Activate LQ.Ability:\n----\n{0}"), {IsValid(AbilityClass) ? AbilityClass->GetName() : "None"});
 }
+#if WITH_EDITOR
+void ULQComboActionPass_ActivateAbility::SetAttackTypeMutipllierOnChanged()
+{
+	if (Payload.IsValid())
+	{
+		auto& Temp = Payload.GetMutable<FLQCombatAnimationAbilityPayload>();
+		if (Temp.ExternalAttackData.IsValid() && Temp.ExternalAttackData.GetScriptStruct()->IsChildOf(FPreApplyDamageData::StaticStruct()))
+		{
+			if (auto Setting = GetDefault<ULQGameplayAbilitiesSettings>())
+			{
+				auto AttackTypeMultiplier = Setting->AttackTypeDamageMutipliers.FindRef(Temp.AbilityTag);
+				auto PreApplyDamageData = Temp.ExternalAttackData.GetMutablePtr<FPreApplyDamageData>();
+				PreApplyDamageData->AttackTypeMultiplier = AttackTypeMultiplier;
+				PreApplyDamageData->MyDataSource = EExternalAttackDataSource::EADS_ComboGraph;
+			}
+		}
+	}
+}
+
+void ULQComboActionPass_ActivateAbility::PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent)
+{
+	Super::PostEditChangeProperty(PropertyChangedEvent);
+	if (PropertyChangedEvent.GetMemberPropertyName() == GET_MEMBER_NAME_CHECKED(ULQComboActionPass_ActivateAbility, Payload))
+	{
+		SetAttackTypeMutipllierOnChanged();
+	}
+}
+#endif

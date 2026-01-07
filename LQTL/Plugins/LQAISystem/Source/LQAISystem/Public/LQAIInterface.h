@@ -30,5 +30,7 @@ public:
 	 */
 	virtual ULQAIStateTreeComponent* GetAIStateTreeComponent() = 0;
 
-
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	AActor* GetAICurrentTarget();
+	virtual AActor* GetAICurrentTarget_Implementation();
 };

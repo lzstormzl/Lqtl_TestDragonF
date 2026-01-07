@@ -30,6 +30,8 @@ public class LQAISystem : ModuleRules
 				"GameplayStateTreeModule",
 				"AIModule",
 				"GameplayTags",
+				"StructUtils",
+				"NavigationSystem",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

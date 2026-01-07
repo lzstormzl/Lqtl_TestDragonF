@@ -8,6 +8,7 @@
 
 #include "UGC_IFocusTargetMethod.generated.h"
 
+struct FUGCCameraFocusSettings;
 /**
  * Function which retrieves the target we want the camera to look at. (Uses the Strategy Design Pattern)
  */
@@ -15,6 +16,7 @@ UCLASS(abstract, Category = "UGC|Methods", EditInlineNew, Blueprintable)
 class AURORADEVS_UGC_API UUGC_IFocusTargetMethod : public UObject
 {
 	GENERATED_BODY()
+
 public:
 	/*
 	 * Get the location of the target we want the camera to look at.
@@ -25,6 +27,10 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "UGC|Methods")
 	AActor* GetTargetLocation(class AActor* InOwner, FVector OwnerLocation, FVector ViewPointLocation, FRotator ViewPointRotation, FVector& OutTargetLocation);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "LQ|Methods")
+	AActor* GetTargetLocationWithSettings(class AActor* InOwner, const FUGCCameraFocusSettings& FocusSettings, FVector OwnerLocation, FVector ViewPointLocation,
+	                                      FRotator ViewPointRotation, FVector& OutTargetLocation);
 
 private:
 	/** Getter for the cached world pointer, will return null if the actor is not actually spawned in a level */

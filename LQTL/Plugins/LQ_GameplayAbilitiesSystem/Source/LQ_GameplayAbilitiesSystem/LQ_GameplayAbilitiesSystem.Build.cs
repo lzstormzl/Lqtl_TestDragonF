@@ -32,7 +32,7 @@ public class LQ_GameplayAbilitiesSystem : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core", "GameplayAbilities", "GameplayTags", "GameplayTasks",
+				"Core", "GameplayAbilities", "GameplayTags", "GameplayTasks", "DeveloperSettings", "SharedGameplayTags"
 				// ... add other public dependencies that you statically link with here ...
 			}
 		);

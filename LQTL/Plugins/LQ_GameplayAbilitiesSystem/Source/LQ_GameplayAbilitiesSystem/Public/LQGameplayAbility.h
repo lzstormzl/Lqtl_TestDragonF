@@ -17,13 +17,13 @@ class LQ_GAMEPLAYABILITIESSYSTEM_API ULQGameplayAbility : public UGameplayAbilit
 	GENERATED_BODY()
 
 protected:
-	void GetActivationPayloadFromAsc(FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo);
 	virtual void PreActivate(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
 	                         const FGameplayAbilityActivationInfo ActivationInfo, FOnGameplayAbilityEnded::FDelegate* OnGameplayAbilityEndedDelegate,
 	                         const FGameplayEventData* TriggerEventData = nullptr) override;
 	virtual void InputPressed(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo) override;
 	virtual void InputReleased(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo) override;
 	virtual void OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec) override;
+	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void ReceiveInputPressed();
@@ -35,4 +35,7 @@ protected:
 	void ReceiveOnGiveAbility();
 
 	TInstancedStruct<FLQAbilityPayloadDataBase> ActivationPayloadData;
+
+private:
+	void GetActivationPayloadFromAsc(FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo);
 };
